@@ -1,2 +1,2 @@
 # realestate
-Mock real estate website for potential client
+Mock real estate website for client
