@@ -87,7 +87,7 @@ const listingsData = [{
         city: 'Amityville',
         state: 'NY',
         rooms: 1,
-        price: 1000,
+        price: 900,
         floorSpace: 850,
         extras: [
             'fireplace',

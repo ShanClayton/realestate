@@ -25,14 +25,26 @@ class App extends Component {
       homeType: 'All',
       bedrooms: '0',
       filteredData: listingsData,
-      populateFormsData: ''
+      populateFormsData: '',
+      sortby: 'price-dsc',
+      view: 'box',
+      search: ''
     }
 
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
+    this.changeView = this.changeView.bind(this)
   }
+  componentWillMount(){
+    var listingsData = this.state.listingsData.sort((a,b)=>{
+      return a.price - b.price
+    })
 
+    this.setState({
+      listingsData
+    })
+  }
   change(event){
     var name = event.target.name
     var value = (event.target.type=== 'checkbox') ? event.target.checked : event.target.value
@@ -44,12 +56,18 @@ class App extends Component {
         this.filteredData()   
       });    
   }
+  changeView(viewName) {
+    this.setState({
+      view: viewName
+    })
+  }
 
   filteredData(){
     var newData = this.state.listingsData.filter((item) =>{
       return item.price >= this.state.min_price && item.price <= this.state.max_price && item.floorSpace >= this.state.min_floor_space
       && item.floorSpace <= this.state.max_floor_space && item.rooms >= this.state.bedrooms
     })
+    //city and hometype
     if (this.state.city != 'All'){
       newData = newData.filter((item)=>{
         return item.city == this.state.city
@@ -60,9 +78,40 @@ class App extends Component {
         return item.homeType == this.state.homeType
       })
     }
+ //price
+    if (this.state.sortby == 'price-dsc') {
+      newData = newData.sort((a, b) => {
+        return a.price - b.price
+      })
+    }
+
+    if (this.state.sortby == 'price-asc') {
+      newData = newData.sort((a, b) => {
+        return b.price - a.price
+      })
+    }
+//search
+    if (this.state.search != ''){
+      newData = newData.filter((item)=>{
+        var city = item.city.toLowerCase()
+        var searchText = this.state.search.toLowerCase()
+        var n = city.match(searchText)
+        if (n != null){
+          return true
+        }
+      })
+    }
+
+
 
     this.setState({
       filteredData: newData
+    })
+  }
+
+  changeView(viewName){
+    this.setState({
+      view: viewName
     })
   }
   
@@ -73,6 +122,7 @@ class App extends Component {
      })
      cities = new Set(cities)
      cities = [...cities]
+     cities = cities.sort()
 
     //homeType
      var homeTypes = this.state.listingsData.map((item) => {
@@ -80,6 +130,7 @@ class App extends Component {
      })
      homeTypes = new Set(homeTypes)
      homeTypes = [...homeTypes]
+     homeTypes = homeTypes.sort()
 
     //bedrooms 
       var bedrooms = this.state.listingsData.map((item) => {
@@ -87,6 +138,8 @@ class App extends Component {
       })
       bedrooms = new Set(bedrooms)
       bedrooms = [...bedrooms]
+      bedrooms = bedrooms.sort()
+
 
     this.setState({
       populateFormsData: {
@@ -106,8 +159,7 @@ render () {
         <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
         <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView}/>
       </section>
-      </div>
-    )
+      </div>)
   }
 }
 
