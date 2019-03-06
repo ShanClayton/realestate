@@ -74,8 +74,7 @@ export default class Header extends Component {
                         <i className="fas fa-bed"></i>
                         <span>{listing.rooms}</span>
                       </div>
-                    </div>
-                    <div className="view-btn">View Listing</div>
+                    </div>              
                   </div>
                 </div>
               </div>
