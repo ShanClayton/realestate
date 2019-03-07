@@ -60,3 +60,5 @@ gulp.task('webpack', (cb) => {
 // gulp.task('server', shell.task([
 //   'yarn run server'
 // ]))
+
+module.exports = gulp;
