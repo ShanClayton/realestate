@@ -1,11 +1,11 @@
 {
-  "name": "CodingPhase-StarterKit",
+  "name": "realestate",
   "version": "1.0.0",
   "description": "Super Cool Framework",
   "main": "index.js",
   "author": "shanaun clayton",
   "license": "MIT",
-  "homepage": "http://rocky.codingphase.com/",
+  "homepage": "",
   "dependencies": {
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
