@@ -42,8 +42,8 @@ gulp.task('styles', () => {
         server: './public',
         notify: false,
         open: false //change this to true if you want the broser to open automatically 
-    });
-})
+    })
+// })
 
 gulp.task('webpack', (cb) => {
   exec('webpack', function (err, stdout, stderr) {
