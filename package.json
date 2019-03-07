@@ -1,11 +1,12 @@
 {
   "name": "realestate",
   "version": "1.0.0",
+  "private": true,
   "description": "Super Cool Framework",
   "main": "index.js",
   "author": "shanaun clayton",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/ShanClayton/realestate",
   "dependencies": {
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
