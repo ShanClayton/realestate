@@ -29,7 +29,7 @@ gulp.task('styles', () => {
 })
 
 gulp.task('browser-sync', ['styles'], function () {
-  THIS IS FOR SITUATIONS WHEN YOU HAVE ANOTHER SERVER RUNNING
+  // THIS IS FOR SITUATIONS WHEN YOU HAVE ANOTHER SERVER RUNNING
   browserSync.init({
     proxy: {
       target: 'localhost:3000', // can be [virtual host, sub-directory, localhost with port]
