@@ -52,3 +52,11 @@ gulp.task('webpack', (cb) => {
     cb(err);
   });
 })
+
+// gulp.task('webpack', shell.task([
+//   'webpack'
+// ]))
+
+// gulp.task('server', shell.task([
+//   'yarn run server'
+// ]))
