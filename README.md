@@ -1,7 +1,7 @@
 
 # Emerald Estates
-<p align= "center">Designed and built by Shanaun Clayton. Art work by Sophia Clayton & Marshonna Carter</p>
-<p align="center"> Live link: https://teamsophia.herokuapp.com/</p>
+<p align= "center">Designed and built by Shanaun Clayton</p>
+<p align="center"> Live link: https://pacific-cliffs-97254.herokuapp.com/</p>
 
 ## About
 <p>
