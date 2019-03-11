@@ -237,7 +237,7 @@ var Header = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'logo' },
-          'Cool Real Estate Logo'
+          'Emerald Estates Reality'
         ),
         _react2.default.createElement(
           'nav',
