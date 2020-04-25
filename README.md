@@ -1,11 +1,11 @@
 
 # Emerald Estates
-<p align= "center">Designed and built by Shanaun Clayton. Art work by Sophia Clayton & Marshonna Carter</p>
-<p align="center"> Live link: https://teamsophia.herokuapp.com/</p>
+<!-- <p align= "center">Designed and built by Shanaun Clayton. Art work by Sophia Clayton & Marshonna Carter</p>
+<p align="center"> Live link: https://teamsophia.herokuapp.com/</p> -->
 
 ## About
 <p>
-Emerald Estates is a simple app built in React. The user is able to search for homes, condos, apartments, and rooms using the search bar or the drop downs. The user can also view by large or small images, highest or lowest prices.</p>
+Real Estate is a simple app built in React. The user can search for homes, condos, apartments, and rooms using the search bar or the dropdowns. The user can also view by large or small images, highest or lowest prices.</p>
 
 ## Wireframes
 ADD
